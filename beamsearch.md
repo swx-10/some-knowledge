@@ -1,15 +1,3 @@
-<head>  
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>  
-    <script type="text/x-mathjax-config">  
-        MathJax.Hub.Config({  
-            tex2jax: {  
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],  
-            inlineMath: [['$','$']]  
-            }  
-        });  
-    </script>  
-</head>  
-
 ## Beam search(集束算法)
 #### 1、算法思想
 beam search尝试在广度优先搜索基础上，引入搜索空间约束(设置beam width超参数)，达到减少内存消耗的目的。简单来说，每次选取概率最大的beam width个词组作为结果，并将他们分别传入下一个时刻的解码阶段进行解码得到新的组合序列，再从新的组合序列中选取最大的beam width个词组，一直循环到结束。  
