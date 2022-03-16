@@ -3,7 +3,7 @@ TextRank的思想比较简单，即通过词之间的相邻关系构建网络，
 
 ### PageRank
 PageRank算法用于解决互联网网页的价值排序问题，网页之间的链接关系即为图的边迭代计算公式如下：  
-![PageRank公式](.\picture\beamsearch.png)  
+![PageRank公式](.%5Cpicture%5CTextRank%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png)  
 其中，$S(V_i)$表示节点$V_i$的值$In(V_i)$表示节点Vi的前驱节点集合，$Out(V_j)$表示节点Vj的后继节点集合，d为阻尼因子用于做平滑。  
 
 TextRank算法是一种基于图的用于关键词抽取和文档摘要的排序算法，由谷歌的网页重要性排序算法PageRank算法改进而来，它利用一篇文档内部的词语间的共现信息(语义)便可以抽取关键词，它能够从一个给定的文本中抽取出该文本的关键词、关键词组，并使用抽取式的自动文摘方法抽取出该文本的关键句。TextRank算法与PageRank算法的相似之处是：
